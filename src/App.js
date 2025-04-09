@@ -13,7 +13,7 @@ function App() {
           count - {count};
           
         </h2>
-        <h3><button onClick={()=>setCount(count+1)} ></button></h3>
+        <h3><button onClick={()=>setCount(count+1)} >" + "</button></h3>
         
           
       </header>
