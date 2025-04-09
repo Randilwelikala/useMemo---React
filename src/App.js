@@ -9,6 +9,17 @@ function App() {
   console.log(numberList);
 
   const [count,setCount] = useState(0);
+
+  const newNumberList = numberList.map((_,index)=>{
+    
+      return {
+        id: index,
+        isSelected:index === 99999
+      
+    }
+  });
+
+  console.log(newNumberList);
   return (
     <div className="App">
       <header className="App-header">
