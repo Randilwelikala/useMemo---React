@@ -4,6 +4,9 @@ import { useState } from 'react';
 
 function App() {
 
+  var numberList = new Array(1000000);
+  numberList.fill(0)
+
   const [count,setCount] = useState(0);
   return (
     <div className="App">
