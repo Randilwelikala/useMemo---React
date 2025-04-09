@@ -5,7 +5,8 @@ import { useState } from 'react';
 function App() {
 
   var numberList = new Array(1000000);
-  numberList.fill(0)
+  numberList.fill(0);
+  console.log(numberList);
 
   const [count,setCount] = useState(0);
   return (
