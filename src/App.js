@@ -2,24 +2,33 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
+const numberList = new Array(100000).fill(0).map((_,index)=>{
+  return{
+    id: index,
+    isSelected: index===999999,
+  }
+});
+
+console.log(numberList);
+
 function App() {
 
-  var numberList = new Array(10000000);
-  numberList.fill(0);
-  console.log(numberList);
+  // var numberList = new Array(10000000);
+  // numberList.fill(0);
+  // console.log(numberList);
 
   const [count,setCount] = useState(0);
 
-  const newNumberList = numberList.map((_,index)=>{
+  // const newNumberList = numberList.map((_,index)=>{
     
-      return {
-        id: index,
-        isSelected:index === 9999
+  //     return {
+  //       id: index,
+  //       isSelected:index === 9999
       
-    }
-  });
+  //   }
+  // });
 
-  console.log(newNumberList);
+  // console.log(newNumberList);
   return (
     <div className="App">
       <header className="App-header">
