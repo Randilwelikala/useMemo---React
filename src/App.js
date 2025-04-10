@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function App() {
 
-  var numberList = new Array(1000000);
+  var numberList = new Array(10000000);
   numberList.fill(0);
   console.log(numberList);
 
@@ -14,7 +14,7 @@ function App() {
     
       return {
         id: index,
-        isSelected:index === 99999
+        isSelected:index === 9999
       
     }
   });
