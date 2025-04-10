@@ -19,6 +19,10 @@ function App() {
 
   const [count,setCount] = useState(0);
 
+  const selecterItem = numberList.find((number)=>{
+    return number.isSelected
+  });
+
   // const newNumberList = numberList.map((_,index)=>{
     
   //     return {
@@ -35,6 +39,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h2>
           count - {count};
+          <br/>
+          Selected Item = {selecterItem.id}
           
         </h2>
         <h3><button onClick={()=>setCount(count+1)} >" + "</button></h3>
