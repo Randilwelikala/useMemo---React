@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-const numberList = new Array(100000).fill(0).map((_,index)=>{
+const numberList = new Array(1000000).fill(0).map((_,index)=>{
   return{
     id: index,
     isSelected: index===999999,
@@ -19,7 +19,7 @@ function App() {
 
   const [count,setCount] = useState(0);
 
-  const selecterItem = numberList.find((number)=>{
+  const selectedItem = numberList.find((number)=>{
     return number.isSelected
   });
 
@@ -40,10 +40,12 @@ function App() {
         <h2>
           count - {count};
           <br/>
-          Selected Item = {selecterItem.id}
-          
+          Selected Item = {selectedItem.id}          
         </h2>
-        <h3><button onClick={()=>setCount(count+1)} >" + "</button></h3>
+
+        <h2>
+          <button onClick={()=>setCount(count+1)} ><h3>" + "</h3></button>
+          </h2>
         
           
       </header>
