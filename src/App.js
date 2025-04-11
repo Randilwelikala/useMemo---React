@@ -2,14 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-const numberList = new Array(1000000).fill(0).map((_,index)=>{
+const numberList = new Array(25000000).fill(0).map((_,index)=>{
   return{
     id: index,
-    isSelected: index===999999,
+    isSelected: index===20000000,
   }
 });
 
-console.log(numberList);
+// console.log(numberList);
 
 function App() {
 
@@ -17,9 +17,11 @@ function App() {
   // numberList.fill(0);
   // console.log(numberList);
 
+  const [newNumberList] = useState(numberList);
+
   const [count,setCount] = useState(0);
 
-  const selectedItem = numberList.find((number)=>{
+  const selectedItem = newNumberList.find((number)=>{
     return number.isSelected
   });
 
