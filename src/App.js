@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { useMemo } from 'react';
+
 
 const numberList = new Array(25000000).fill(0).map((_,index)=>{
   return{
@@ -21,8 +23,8 @@ function App() {
 
   const [count,setCount] = useState(0);
 
-  // const selectedItem = useMemo(() => newNumberList.find((number)=>number.isSelected),[newNumberList]);
-  const selectedItem = newNumberList.find((number)=>number.isSelected);
+  const selectedItem = useMemo(() => newNumberList.find((number)=>number.isSelected),[newNumberList]);
+  // const selectedItem = newNumberList.find((number)=>number.isSelected);
 
  
 
