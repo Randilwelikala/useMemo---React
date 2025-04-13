@@ -21,7 +21,9 @@ function App() {
 
   const [count,setCount] = useState(0);
 
-  const selectedItem = useMemo(() => newNumberList.find((number)=>number.isSelected),[newNumberList]);
+  // const selectedItem = useMemo(() => newNumberList.find((number)=>number.isSelected),[newNumberList]);
+  const selectedItem = newNumberList.find((number)=>number.isSelected);
+
  
 
   // const newNumberList = numberList.map((_,index)=>{
